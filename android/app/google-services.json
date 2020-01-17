@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "268726970242",
+    "firebase_url": "https://bobbydatamanager.firebaseio.com",
+    "project_id": "bobbydatamanager",
+    "storage_bucket": "bobbydatamanager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268726970242:android:e2c1cb754e89eec145519b",
+        "android_client_info": {
+          "package_name": "com.tensor.financial_App"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268726970242-em9i9148rfmklbr3sstfe3b9ela8im87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdt3gmXessMW60c2HxMh2sbsK6ladBFiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268726970242-em9i9148rfmklbr3sstfe3b9ela8im87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
