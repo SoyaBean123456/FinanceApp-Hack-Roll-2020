@@ -1,15 +1,21 @@
+import 'package:financial_App/services/auth.dart';
 import 'package:flutter/material.dart';
+import 'models/user.dart';
 import 'screens/wrapper.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'HAHAH will be override so no point',
-      theme: ThemeData(primaryColor: Colors.purple[900]),
-      home: Wrapper(),
+    return StreamProvider<User>.value(
+      value: AuthService().user,
+          child: MaterialApp(
+        title: 'HAHAH will be override so no point',
+        theme: ThemeData(primaryColor: Colors.purple[900]),
+        home: Wrapper(),
+      ),
     );
   }
 }

@@ -1,7 +1,11 @@
 import 'package:financial_App/screens/tensorchatbotscreen/ChatBot.dart';
+import 'package:financial_App/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
+
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +55,13 @@ class MainPage extends StatelessWidget {
             ListTile(
               title: new Text("Promotions"),
               leading: new Icon(Icons.local_offer),
+            ),
+            ListTile(
+              title: new Text("Sign out"),
+              leading: new Icon(Icons.exit_to_app),
+              onTap: () async {
+                await _auth.signOut();
+              },
             ),
           ],
         ),
