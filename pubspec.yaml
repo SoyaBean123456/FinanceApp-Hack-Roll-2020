@@ -48,13 +48,19 @@ flutter:
     - assets/credentials.json
     - assets/images/office_background 2.jpg
     - assets/images/office_background.jpg
-<<<<<<< HEAD
     - assets/images/pie chart.png
     - assets/images/line graph.png
     - assets/images/dashboard.png
-    - assets/images/
-
     - assets/images/tom.jpg
+    - assets/images/WhatsApp Image 2020-01-19 at 11.44.29.png
+    - assets/images/WhatsApp Image 2020-01-19 at 11.44.42.png
+    - assets/images/WhatsApp Image 2020-01-19 at 11.44.48.png
+    - assets/images/WhatsApp Image 2020-01-19 at 11.44.55.png
+    - assets/images/WhatsApp Image 2020-01-19 at 11.45.01.png
+    - assets/images/WhatsApp Image 2020-01-19 at 11.45.11.png
+    - assets/images/WhatsApp Image 2020-01-19 at 11.45.17.png
+    - assets/images/WhatsApp Image 2020-01-19 at 11.46.46.png
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

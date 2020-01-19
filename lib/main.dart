@@ -1,6 +1,7 @@
 import 'package:financial_App/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'models/user.dart';
+import 'screens/Details/reports.dart';
 import 'screens/wrapper.dart';
 import 'package:provider/provider.dart';
 

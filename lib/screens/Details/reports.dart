@@ -85,55 +85,55 @@ Widget build(BuildContext context) {
             new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/dashboard.png'),),
+             child: Image(image: AssetImage('assets/images/dashboard.png'),),
            ),
         ),
           new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.44.29.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.44.29.png'),),
            ),
         ),
         new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.44.42.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.44.42.png'),),
            ),
         ),
         new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.44.48.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.44.48.png'),),
            ),
         ),
         new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.44.55.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.44.55.png'),),
            ),
         ),
         new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.45.01.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.45.01.png'),),
            ),
         ),
         new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.45.11.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.45.11.png'),),
            ),
         ),
         new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.45.17.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.45.17.png'),),
            ),
         ),
         new Padding(
            padding: new EdgeInsets.all(20.0),
            child: Container(
-             child: Image(image: AssetImage('assets/WhatsApp Image 2020-01-19 at 11.46.46.png'),),
+             child: Image(image: AssetImage('assets/images/WhatsApp Image 2020-01-19 at 11.46.46.png'),),
            ),
         ),
 
@@ -142,7 +142,19 @@ Widget build(BuildContext context) {
         )
         
       ),
+      
   ),
+        floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xFFEC4435),
+        tooltip: 'Chat with Tensor', // used by assistive technologies
+        child: Icon(Icons.message),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => HomePageDialogflow()),
+          );
+        },
+      ),
   );
 }
 }
