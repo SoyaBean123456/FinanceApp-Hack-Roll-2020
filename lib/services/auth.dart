@@ -27,6 +27,7 @@ class AuthService {
       return null;
     }
   }
+  
   // sign in with email and password
   Future signInWithEmailAndPassword(String email, String password) async {
     try{
