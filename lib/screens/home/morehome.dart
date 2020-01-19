@@ -1,10 +1,5 @@
-import 'package:financial_App/screens/Analytics/analytics.dart';
-import 'package:financial_App/screens/home/addexpenses.dart';
-import 'package:financial_App/screens/home/morehome.dart';
 import 'package:flutter/material.dart';
 import 'package:financial_App/screens/tensorchatbotscreen/ChatBot.dart';
-
-
 import 'package:financial_App/services/auth.dart';
 
 // class Home extends StatefulWidget {
@@ -14,7 +9,7 @@ import 'package:financial_App/services/auth.dart';
 //   }
 // }
 
-class HomePage extends StatelessWidget {
+class HomePageMore extends StatelessWidget {
   final AuthService _auth = AuthService();
   
 Widget build(BuildContext context) {
@@ -53,22 +48,14 @@ Widget build(BuildContext context) {
               onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HomePage()),
+            MaterialPageRoute(builder: (context) => HomePageMore()),
           );
               }
             ),
-              
             ListTile(
               title: new Text("Analytics"),
               leading: new Icon(Icons.pie_chart),
-              onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Analytics()),
-          );
-              }
             ),
-              
             ListTile(
               title: new Text("My Details"),
               leading: new Icon(Icons.person),
@@ -119,17 +106,12 @@ Widget build(BuildContext context) {
             child: Text('Your total expenditure for the past 28 days is: '),
           
           ),
-          Text(' SGD 3975 ', style: TextStyle(fontSize: 34.0, color: const Color(0xFFDA2A1A), fontWeight: FontWeight.bold)),
+          Text(' SGD 4000 ', style: TextStyle(fontSize: 34.0, color: const Color(0xFFDA2A1A), fontWeight: FontWeight.bold)),
           ButtonBar(
             children: <Widget>[
               FlatButton(
                 child: const Text('Add Expenses', style: TextStyle(color: const Color(0xFFFF8E72))),
-                onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => AddExpenses()),
-          );
-        },
+                onPressed: () { /* ... */ },
               ),
           
               
@@ -147,6 +129,39 @@ Widget build(BuildContext context) {
           ),
           
           
+        ),
+
+        new Padding(
+          padding: new EdgeInsets.all(15.0),
+          child: Container(
+            child:Card(
+      
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        
+        children: <Widget>[
+          const ListTile(
+            leading: Icon(Icons.shopping_cart),
+            title: Text('H&M'),
+            subtitle: Text('19/1/2020'),
+          ),
+          ButtonBar(
+            children: <Widget>[
+              FlatButton(
+                child: const Text('SGD 25.00',style: TextStyle(color: const Color(0xFFED6A5E))),
+                onPressed: () { /* ... */ },
+              ),
+        ],
+      ),
+        ],
+    ),
+    
+          ),
+          
+          
+        ),
+          
+        
         ),
 
         new Padding(
