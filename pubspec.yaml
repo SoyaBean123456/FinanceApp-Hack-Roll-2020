@@ -48,10 +48,14 @@ flutter:
     - assets/credentials.json
     - assets/images/office_background 2.jpg
     - assets/images/office_background.jpg
+<<<<<<< HEAD
     - assets/images/pie chart.png
     - assets/images/line graph.png
     - assets/images/dashboard.png
     - assets/images/
+=======
+    - assets/images/tom.jpg
+>>>>>>> 66eb4fe63f3f085a14b3c00416565662c23028e7
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
