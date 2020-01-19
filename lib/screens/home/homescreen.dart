@@ -1,9 +1,10 @@
+import 'package:financial_App/screens/property/PropertyPage.dart';
 import 'package:financial_App/screens/tensorchatbotscreen/ChatBot.dart';
+import 'package:financial_App/screens/transaction/TransactionPage.dart';
 import 'package:financial_App/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
-
   final AuthService _auth = AuthService();
 
   @override
@@ -44,18 +45,32 @@ class MainPage extends StatelessWidget {
             Divider(
               height: 0.1,
             ),
+            // ListTile(
+            //   title: new Text("Transaction"),
+            //   leading: new Icon(Icons.attach_money),
+            //   onTap: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (context) => TransactionPage(),
+            //         ),
+            //       );
+            //     }
+            // ),
             ListTile(
-              title: new Text("Bank Loan"),
-              leading: new Icon(Icons.attach_money),
-            ),
+                title: new Text("Property"),
+                leading: new Icon(Icons.home),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PropertyPage(),
+                    ),
+                  );
+                }),
             ListTile(
-              title: new Text("Social"),
-              leading: new Icon(Icons.people),
-            ),
-            ListTile(
-              title: new Text("Promotions"),
-              leading: new Icon(Icons.local_offer),
-            ),
+                title: new Text("Promotions"),
+                leading: new Icon(Icons.local_offer)),
             ListTile(
               title: new Text("Sign out"),
               leading: new Icon(Icons.exit_to_app),
