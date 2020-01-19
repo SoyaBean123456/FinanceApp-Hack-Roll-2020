@@ -52,7 +52,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
     ChatMessage message = new ChatMessage(
       text: response.getMessage() ??
           new CardDialogflow(response.getListMessage()[0]).title,
-      name: "Tensor",
+      name: "Tom",
       type: false,
     );
     setState(
@@ -82,7 +82,7 @@ class _HomePageDialogflow extends State<HomePageDialogflow> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text("Tensor Chat Agent"),
+        title: new Text("Chat with Tom!!"),
       ),
       body: new Column(
         children: <Widget>[

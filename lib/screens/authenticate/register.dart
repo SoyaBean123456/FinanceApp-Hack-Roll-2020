@@ -10,7 +10,6 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-  
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
 
@@ -20,75 +19,92 @@ class _RegisterState extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.red[300],
-      appBar: AppBar(
-        backgroundColor: Colors.red[700],
-        elevation: 0.0,
-        title: Text('Sign in to Tensor Financial App'),
-        actions: <Widget>[
-          FlatButton.icon(
-            icon: Icon(Icons.person),
-            label: Text('Sign In'),
-            onPressed: () {
-              widget.toggleView();
-            },
-          )
-        ],
-      ),
-      body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-        child: RaisedButton(
-          onPressed: () {},
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 20.0),
-                TextFormField(
-                  validator: (val) => val.isEmpty ? 'Enter an email' : null,
-                  onChanged: (val) {
-                    setState(() => email = val);
-                  },
-                ),
-                SizedBox(height: 20.0),
-                TextFormField(
-                    //privacy gmail/password
-                    obscureText: true,
-                    validator: (val) => val.length < 6
-                        ? 'Enter an password 6+ chars long'
-                        : null,
-                    onChanged: (val) {
-                      setState(() => password = val);
-                    }
-                    //privacy password input
+    return Stack(
+      children: <Widget>[
+        Image.asset(
+          'assets/images/office_background.jpg',
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          fit: BoxFit.cover,
+        ),
+        Scaffold(
+          backgroundColor: Colors.grey.withOpacity(0.5),
+          appBar: AppBar(
+            backgroundColor: Colors.grey.withOpacity(0.5),
+            elevation: 0.0,
+            title: Text('Sign up to Ka-Ching!', style: TextStyle(color: Colors.black),),
+            actions: <Widget>[
+              FlatButton.icon(
+                icon: Icon(Icons.person),
+                label: Text('Sign In'),
+                onPressed: () {
+                  widget.toggleView();
+                },
+              )
+            ],
+          ),
+          body: Container(
+            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+            child: RaisedButton(
+              color: Colors.white.withOpacity(0.66),
+              onPressed: () {},
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 20.0),
+                    TextFormField(
+                      decoration: InputDecoration(hintText: 'Email'),
+                      validator: (val) => val.isEmpty ? 'Enter an email' : null,
+                      onChanged: (val) {
+                        setState(() => email = val);
+                      },
                     ),
-                SizedBox(height: 20.0),
-                RaisedButton(
-                  color: Colors.pink[400],
-                  child: Text(
-                    'Register',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  onPressed: () async {
-                    if (_formKey.currentState.validate()) {
-                      dynamic result = await _auth.registerWithEmailAndPassword(email, password);
-                      if (result == null) {
-                        setState(() => error = 'please supply a valid email');
-                      } 
-                    }
-                  },
+                    SizedBox(height: 20.0),
+                    TextFormField(
+                        decoration: InputDecoration(hintText: 'Password'),
+                        //privacy gmail/password
+                        obscureText: true,
+                        validator: (val) => val.length < 6
+                            ? 'Enter an password 6+ chars long'
+                            : null,
+                        onChanged: (val) {
+                          setState(() => password = val);
+                        }
+                        //privacy password input
+                        ),
+                    SizedBox(height: 20.0),
+                    OutlineButton(
+                      color: const Color(0xFFDA2A1A),
+                      shape: new RoundedRectangleBorder( borderRadius: new BorderRadius.circular(30.0)),
+                      borderSide: BorderSide(color: Colors.red),
+                      child: Text(  
+                        'Register',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      onPressed: () async {
+                        if (_formKey.currentState.validate()) {
+                          dynamic result = await _auth
+                              .registerWithEmailAndPassword(email, password);
+                          if (result == null) {
+                            setState(
+                                () => error = 'please supply a valid email');
+                          }
+                        }
+                      },
+                    ),
+                    SizedBox(height: 12.0),
+                    Text(
+                      error,
+                      style: TextStyle(color: Colors.red, fontSize: 14.0),
+                    ),
+                  ],
                 ),
-                SizedBox(height: 12.0),
-                Text(
-                  error,
-                  style: TextStyle(color: Colors.red, fontSize: 14.0),
-                ),
-              ],
+              ),
             ),
           ),
         ),
-      ),
+      ],
     );
   }
 }
