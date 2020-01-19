@@ -32,7 +32,7 @@ class _RegisterState extends State<Register> {
           appBar: AppBar(
             backgroundColor: Colors.grey.withOpacity(0.5),
             elevation: 0.0,
-            title: Text('Sign up to Ka-Ching!', style: TextStyle(color: Colors.black),),
+            title: Text('Sign up with Ka-Ching!', style: TextStyle(color: Colors.black),),
             actions: <Widget>[
               FlatButton.icon(
                 icon: Icon(Icons.person),
