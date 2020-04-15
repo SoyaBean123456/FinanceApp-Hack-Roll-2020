@@ -1,4 +1,4 @@
-# financial_App
+# financial_App - Contributed In Performing Classification Data Mining Analysis With R
 
 App development using flutter, dialogflow and firebase for the upcoming Hack&Roll2020!!
 
